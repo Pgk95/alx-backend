@@ -37,7 +37,7 @@ class Server:
     def get_hyper(self, page: int = 1, page_size=10) -> dict:
         """returns key value pairs that are listed below"""
         total = math.ceil(len(self.dataset()) / page_size)
-        dict = {
+        dictionary = {
             'page_size': len(self.get_page(page, page_size)),
             'page': page,
             'data': self.get_page(page, page_size),
@@ -45,7 +45,7 @@ class Server:
             'prev_page': page - 1 if page + 1 > 1 else None,
             'total_pages': total
         }
-        return dict
+        return dictionary
 
 
 def index_range(page: int, page_size: int) -> tuple:
