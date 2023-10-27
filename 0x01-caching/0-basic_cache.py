@@ -10,12 +10,14 @@ class BasicCache(BaseCaching):
     """
     def put(self, key, item):
         """assigning the dictionary"""
-        if key is not None or item is not None:
-            self.cache_data[key] = item
-        else:
+        if key is None or item is None:
             return None
+        else:
+            self.cache_data[key] = item
 
     def get(self, key):
         """returns the value in self.cache_data[key]"""
         if key in self.cache_data:
             return self.cache_data[key]
+        else:
+            return None
