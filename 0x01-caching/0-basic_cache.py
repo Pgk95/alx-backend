@@ -19,5 +19,3 @@ class BasicCache(BaseCaching):
         """returns the value in self.cache_data[key]"""
         if key in self.cache_data:
             return self.cache_data[key]
-        else:
-            return None
