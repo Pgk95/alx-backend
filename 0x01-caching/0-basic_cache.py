@@ -5,6 +5,9 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 
 class BasicCache(BaseCaching):
+    """Basic Cache that inherits from his
+       parent class BaseCaching
+    """
     def put(self, key, item):
         """assigning the dictionary"""
         self.cache_data[key] = item
