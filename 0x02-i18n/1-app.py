@@ -11,12 +11,3 @@ app.config['BABEL_DEFAULT_LOCALE'] = "en"
 app.config['BABEL_DEFAULT_TIMEZONE'] = "UTC"
 
 babel.init_app(app)
-
-@app.route("/", strict_slashes=False)
-def index():
-    """index page"""
-    return render_template("1-index.html")
-
-
-if __name__ == "__main__":
-    app.run()
