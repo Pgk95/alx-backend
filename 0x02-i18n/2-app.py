@@ -3,6 +3,7 @@
 
 from flask import Flask, g, request, render_template
 from flask_babel import Babel
+from typing import Callable
 
 app = Flask(__name__)
 babel = Babel(app)
