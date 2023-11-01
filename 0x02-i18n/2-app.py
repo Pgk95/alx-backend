@@ -2,7 +2,7 @@
 """initialize babel request"""
 
 from flask import Flask, g, request, render_template
-from flask_babel import Babel
+from flask_babel import Babel, gettext
 from typing import Callable
 
 app = Flask(__name__)
@@ -26,10 +26,10 @@ def index():
 
 
 @babel.localeselector
-def get_locale() -> str:
+def get_locale():
     """get locale"""
-    return request.accept_languages.best_match(['en', 'fr'])
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run()
