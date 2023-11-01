@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" configuring route Babel """
+"""configuring route Babel"""
 from flask import Flask, render_template, request
 from flask_babel import Babel, gettext
 
